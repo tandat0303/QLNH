@@ -199,7 +199,7 @@ public class Menu {
 
         System.out.println("So luong mon chinh da ban: " + mainDishCount);
         System.out.println("So luong mon trang mieng da ban: " + dessertCount);
-        System.out.println("So luong do uong da ban: " + dessertCount);
+        System.out.println("So luong do uong da ban: " + drinkCount);
     }
 }
 
