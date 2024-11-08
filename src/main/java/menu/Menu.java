@@ -145,8 +145,10 @@ public class Menu {
                 if (parts.length == 3) {
                     if (parts[0].equalsIgnoreCase("Mon chinh")){
                         addFood(new MainDish(parts[1], Double.parseDouble(parts[2])));
-                    } else {
+                    } else if (parts[0].equalsIgnoreCase("Mon trang mieng")){
                         addFood(new Dessert(parts[1], Double.parseDouble(parts[2])));
+                    } else {
+                        addFood(new Drink(parts[1], Double.parseDouble(parts[2])));
                     }
                 }
             }
