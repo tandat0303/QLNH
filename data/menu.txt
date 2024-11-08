@@ -1,0 +1,5 @@
+Mon chinh,com chien,25.0
+Mon trang mieng,chuoi,14.0
+Mon chinh,My xao,20.0
+Mon chinh,Nui xao,17.0
+Do uong,Pepsi,10.0
