@@ -1,9 +1,5 @@
 package restaurant;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class Table {
     private int tableNumber;
     private String status;
