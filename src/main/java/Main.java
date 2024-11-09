@@ -7,11 +7,9 @@ import Interface.Manageable;
 
 public class Main implements Manageable {
     private Menu menu;
-    private Map<String, Integer> sales;
 
     public Main() {
         menu = new Menu();
-        sales = new HashMap<>();
     }
 
     public static void main(String[] args) {

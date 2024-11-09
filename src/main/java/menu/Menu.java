@@ -69,7 +69,7 @@ public class Menu {
         System.out.println("Khong tim thay mon an: " + name);
     }
     
-    public double calculateTotalRevenue() {
+    public void calculateTotalRevenue() {
         int mainDishCount = 0;
         int dessertCount = 0;
         int drinkCount = 0;
@@ -109,7 +109,6 @@ public class Menu {
         System.out.println("So luong mon an nhe da ban: " + snackCount);
 
         System.out.println("Tong doanh thu: " + total);
-        return total;
     }
     
     public void placeOrder(String foodName, int quantity, String employeeName, int tableNumber) {
