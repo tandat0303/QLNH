@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
 import menu.*;
 import restaurant.*;
 import Interface.Manageable;
