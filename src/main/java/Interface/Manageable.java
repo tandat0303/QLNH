@@ -1,4 +1,4 @@
 package Interface;
 
-public interface Manageable extends EmployeeGUI, TableGUI, FoodGUI{
+public interface Manageable extends EmployeeGUI, TableGUI, FoodGUI, OrderGUI{
 }

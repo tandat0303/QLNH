@@ -122,6 +122,7 @@ public class Main implements Manageable {
             System.out.println("1. Xem menu");
             System.out.println("2. Tim mon an");
             System.out.println("3. Dat mon");
+            System.out.println("4. Thanh toan");
             System.out.println("0. Thoat");
             System.out.print("Nhap lua chon: ");
             choice = sc.nextInt();
@@ -136,6 +137,9 @@ public class Main implements Manageable {
                     break;
                 case 3:
                     placeOrderMenu(sc);
+                    break;
+                case 4:
+                    checkOut(sc);
                     break;
                 case 0:
                     System.out.println("Dang thoat ...");
@@ -284,7 +288,21 @@ public class Main implements Manageable {
         System.out.print("Nhap so luong: ");
         int quantity = sc.nextInt();
         sc.nextLine();
-        menu.placeOrder(foodName, quantity);
+        System.out.print("Nhap ten nhan vien phuc vu: ");
+        String employeeName = sc.nextLine();
+        System.out.print("Nhap so ban phuc vu: ");
+        int tableNumber = sc.nextInt();
+        sc.nextLine();
+
+        placeOrder(foodName, quantity, employeeName, tableNumber);
+    }
+
+    public void checkOut(Scanner sc){
+        System.out.print("Nhap so ban thanh toan: ");
+        int tableNumber = sc.nextInt();
+        sc.nextLine();
+
+        completeOrder(tableNumber);
     }
 
     public void saveMenu() {
@@ -398,5 +416,15 @@ public class Main implements Manageable {
     @Override
     public void deleteEmployee(String employeeName){
         menu.deleteEmployee(employeeName);
+    }
+
+    @Override
+    public void placeOrder(String foodName, int quantity, String employeeName, int tableNumber){
+        menu.placeOrder(foodName, quantity, employeeName, tableNumber);
+    }
+
+    @Override
+    public void completeOrder(int tableNumber){
+        menu.completeOrder(tableNumber);
     }
 }

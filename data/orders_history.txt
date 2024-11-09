@@ -1,0 +1,7 @@
+Dat,Pepsi,2,1
+Dat,com chien,2,1
+Dat,chuoi,2,1
+Dat,My xao,1,1
+Phuc,chuoi,2,2
+Phuc,chocopie,2,1
+Dat,com chien,2,2
