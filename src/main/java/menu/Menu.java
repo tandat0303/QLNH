@@ -143,7 +143,7 @@ public class Menu {
         }
     
         food.setQuantitySold(food.getQuantitySold() + quantity);
-        System.out.println("Dat mon thanh cong: " + food.getName() + " x " + quantity);
+        System.out.println("Dat mon thanh cong: " + food.getName() + " x " + quantity + " tai ban so " + tableNumber);
     
         selectedTable.setStatus("Dang phuc vu");
         saveTableListToFile();
@@ -175,7 +175,7 @@ public class Menu {
         }
 
         if (selectedTable.getStatus().equals("Trong")) {
-            System.out.println("Ban hien dang trong");
+            System.out.println("Ban so " + selectedTable.getTableNumber() + " hien dang trong");
             return;
         }
         
@@ -212,7 +212,7 @@ public class Menu {
         for (Table table : tableList) {
             if (table.getTableNumber() == tableNumber) {
                 table.setStatus("Trong");
-                System.out.println("Thanh toan thanh cong!");
+                System.out.println("Thanh toan thanh cong ban so " + tableNumber);
                 saveTableListToFile();
                 return;
             }
