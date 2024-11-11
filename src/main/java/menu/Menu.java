@@ -18,7 +18,7 @@ public class Menu {
     }
 
     public void removeFood(String name) {
-        foodList.removeIf(food -> food.getName().equals(name));
+        foodList.removeIf(food -> food.getName().equalsIgnoreCase(name));
     }
 
     public void updateFood(String name) {
@@ -27,7 +27,7 @@ public class Menu {
 
         for (Food food : foodList) {
             if (food.getName().equalsIgnoreCase(name)) {
-                System.out.println("Da tim thay mon an: " + food.getName() + " voi gia: " + food.getPrice());
+                System.out.println("Da tim thay mon an: " + food.getName() + " voi gia: " + food.getPrice() + " (VND)");
                 System.out.print("Nhap ten moi (Nhan Enter de giu nguyen): ");
                 String newName = sc.nextLine();
                 if (!newName.isEmpty()) {
@@ -54,6 +54,8 @@ public class Menu {
     }
     
     public void displayMenu() {
+        System.out.println("Thuc don: ");
+        
         for (Food food : foodList) {
             food.display();
         }
@@ -61,7 +63,7 @@ public class Menu {
 
     public void searchFood(String name) {
         for (Food food : foodList) {
-            if (food.getName().equals(name)) {
+            if (food.getName().equalsIgnoreCase(name)) {
                 food.display();
                 return;
             }
@@ -103,12 +105,14 @@ public class Menu {
             e.printStackTrace();
         }
         
+        System.out.println("Doanh thu nha hang: \n");
+        
         System.out.println("So luong mon chinh da ban: " + mainDishCount);
         System.out.println("So luong mon trang mieng da ban: " + dessertCount);
         System.out.println("So luong do uong da ban: " + drinkCount);
         System.out.println("So luong mon an nhe da ban: " + snackCount);
 
-        System.out.println("Tong doanh thu: " + total);
+        System.out.println("Tong doanh thu: " + total + " (VND)");
     }
     
     public void placeOrder(String foodName, int quantity, String employeeName, int tableNumber) {
@@ -356,7 +360,7 @@ public class Menu {
     
     public Food getFoodByName(String foodName) {
         for (Food food : foodList) {
-            if (food.getName().equals(foodName)) {
+            if (food.getName().equalsIgnoreCase(foodName)) {
                 return food;
             }
         }

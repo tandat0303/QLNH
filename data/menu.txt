@@ -1,6 +1,6 @@
-Mon chinh,com chien,25.0
-Mon trang mieng,chuoi,14.0
-Mon chinh,My xao,20.0
-Mon chinh,Nui xao,17.0
-Do uong,Pepsi,10.0
-Mon an nhe,chocopie,8.0
+Mon chinh,com chien,25000.0
+Mon trang mieng,chuoi,14000.0
+Mon chinh,My xao,20000.0
+Mon chinh,Nui xao,17000.0
+Do uong,Pepsi,10000.0
+Mon an nhe,chocopie,8000.0
