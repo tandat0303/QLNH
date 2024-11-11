@@ -50,6 +50,7 @@ public class Menu {
             System.out.println("Khong tim thay mon an co ten: " + name);
         }
 
+        sc.close();
         saveToFile();
     }
     
